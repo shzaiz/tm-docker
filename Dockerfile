@@ -1,6 +1,4 @@
 FROM debian:bookworm
-#ubuntu:22.04
-#MAINTAINER Massimiliano Gubinelli <m.gubinelli@gmail.com>
 
 LABEL org.opencontainers.image.title="Debian Bookword + git + TeXmacs"
 LABEL org.opencontainers.image.description="Debian image with git + TeXmacs pre-installed. Intended primarily for CD workflows."
@@ -22,7 +20,7 @@ RUN wget http://www.texmacs.org/Download/ftp/tmftp/Linux/Debian_12/TeXmacs-2.1.4
     && DEBIAN_FRONTEND=noninteractive apt install -y /tmp/texmacs.deb \ 
     && rm -r /tmp/texmacs.deb 
 
-WORKDIR /usr/local/app
-RUN useradd app
-USER app
+#WORKDIR /usr/local/app
+#RUN useradd app
+#USER app
 
